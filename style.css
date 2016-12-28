@@ -1,8 +1,8 @@
 
 .section {
   display:flex;
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 .bow {
   background: #D4AF37; /*Metallic gold */
@@ -16,9 +16,10 @@
 }
 #bowUp {
   position: absolute;
-  height: 100%;
+  height: 100vh;
   width: 90px;
   left: 10%;
+  top: 0;
 }
 .bowTag {
     width: 200px;
@@ -50,11 +51,25 @@
 }
 
 #MerryChristmas  p {
-  font-size: 40px;
+  font-size: 5vh;
   font-family: 'Brush Script MT';
   color: goldenrod;
-  /*"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */
+/*  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+*/
 }
+
+/* MAP SECTION */
+#map {
+  flex-direction: column
+}
+#mapTitle {
+  text-align: center;
+}
+
+#map a {
+  color: transparent !important;
+}
+
 
 #phone {
   align-self:center;
@@ -91,9 +106,10 @@ body {
 /* BAR CHART SECTION */
 #rotatingText {
   text-align: left;
-  width: 500px;
+  width: 200px;
 }
 .textRotateBox {
+  align-self: center;
   display:inline-block;
   font-size: 40px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -116,12 +132,9 @@ body {
   text-align: center;
 }
 
-.divider {
-  height: 200px;
-}
-
 /* BOOK  CHAPTER SECTION */
 .book {
+  align-self: center;
   position: relative;
   width: 20rem;
   height: 26rem;
@@ -148,16 +161,20 @@ body {
   z-index: 100;
   -webkit-transform: perspective(700) rotateY(0deg);
           transform: perspective(700) rotateY(0deg);
-  background: goldenrod -webkit-linear-gradient(0deg, transparent 3%, rgba(0, 0, 0, 0.1) 5%, transparent 6%);
-  background: goldenrod linear-gradient(90deg, transparent 3%, rgba(0, 0, 0, 0.1) 5%, transparent 6%);
+  background: #e5000f -webkit-linear-gradient(0deg, transparent 3%, rgba(0, 0, 0, 0.1) 5%, transparent 6%);
+  background: #e5000f linear-gradient(90deg, transparent 3%, rgba(0, 0, 0, 0.1) 5%, transparent 6%);
 }
 .cover h2 {
-  font-size: 1.3em;
+  font-size: 2em;
   font-family: 'UnifrakturCook', cursive;
   padding-top: 25%;
   padding-bottom:25%;
   text-align: center;
-  color: #fff;
+  color: green;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  color: black;
+  opacity: 0.3;
+  /*font: 80px 'Museo700';*/
 }
 .page {
   padding: 1.1em;
@@ -258,12 +275,27 @@ body {
   box-sizing: border-box;
 }
 
-
-/*#phone:hover .sms {
-  -webkit-transform: translateY(-25px);
-  -webkit-transition-duration: .25s;
-  transition-timing-function: linear;
-  transform: translateY(-25px);
-  transition-duration: .25s;
+.photo-line {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-*/
+
+img {
+  max-width: 100vw;
+}
+
+#thankYou {
+  justify-content: center;
+}
+
+#portfolio {
+  font-size: 40px;
+  text-align: center;
+  justify-content: center;
+}
+
+.align-center {
+  align-self: center;
+}
